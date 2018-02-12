@@ -17,7 +17,6 @@ public class CPlayerFeet : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             player.SetGrounded();
-            Debug.Log("Player touching ground.");
         }
     }
 }
