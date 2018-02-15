@@ -16,7 +16,6 @@ public class CPlayerMovementDblJump : MonoBehaviour
     #region Private Attributes
     private Animator animator;
     private Rigidbody2D rigidBody;
-    private float hInput;
     private Vector3 rightWalkingScale;
     private Vector3 leftWalkingScale;
     private bool jumped;
@@ -27,13 +26,12 @@ public class CPlayerMovementDblJump : MonoBehaviour
 
     private void Awake()
     {
-        //animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         rigidBody = GetComponent<Rigidbody2D>();
     }
 
     private void Start()
     {
-        hInput = 0f;
         rightWalkingScale = transform.localScale;
         leftWalkingScale = new Vector3(-rightWalkingScale.x, rightWalkingScale.y, rightWalkingScale.z);
         jumped = false;
@@ -55,6 +53,8 @@ public class CPlayerMovementDblJump : MonoBehaviour
     public void SetGrounded()
     {
         jumped = dblJumped = false;
+        // set parameter for jumping
+        animator.SetBool("Jumping", jumped);
     }
     #endregion
 
@@ -66,13 +66,20 @@ public class CPlayerMovementDblJump : MonoBehaviour
     /// </summary>
     private void Move()
     {
-        hInput = Input.GetAxisRaw("Horizontal");
-        //if (isTouchingGround) animator.SetBool("Walking", hInput != 0f);
-        //else animator.SetBool("Walking", false);
-        if (hInput < 0f) transform.localScale = leftWalkingScale;
-        else if (hInput > 0f) transform.localScale = rightWalkingScale;
-        transform.Translate(Vector3.right * hInput * Time.deltaTime * moveSpeed);
-
+        int dir = 0;
+        if (CInputController.instance.IsLeftPressed)
+        {
+            transform.localScale = leftWalkingScale;
+            dir = -1;
+        }
+        else if (CInputController.instance.IsRightPressed)
+        {
+            transform.localScale = rightWalkingScale;
+            dir = 1;
+        }
+        transform.Translate(Vector3.right * dir * Time.deltaTime * moveSpeed);
+        // set parameter for walking or idle animation
+        animator.SetInteger("Walking", dir);
     }
 
     /// <summary>
@@ -81,19 +88,21 @@ public class CPlayerMovementDblJump : MonoBehaviour
     /// </summary>
     private void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (CInputController.instance.IsABtnFirstPress)
         {
             if(!jumped)
             {
                 jumped = true;
                 rigidBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             }
-            else if(!dblJumped)
+            else if(jumped && !dblJumped)
             {
                 dblJumped = true;
                 rigidBody.velocity = new Vector2(rigidBody.velocity.x, 0f);
                 rigidBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             }
+            // set parameter for jumping
+            animator.SetBool("Jumping", jumped);
         }
     }
     #endregion
