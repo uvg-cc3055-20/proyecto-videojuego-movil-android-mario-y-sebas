@@ -59,10 +59,12 @@ public class CInputController : MonoBehaviour
             case 0: // left d pad
                 imgDPad.sprite = leftPressed;
                 isLeftPressed = true;
+                isRightPressed = false;
                 break;
             case 1: // right d pad
                 imgDPad.sprite = rightPressed;
                 isRightPressed = true;
+                isLeftPressed = true;
                 break;
             default:
                 StartCoroutine(ButtonFirstPress(buttonId));
