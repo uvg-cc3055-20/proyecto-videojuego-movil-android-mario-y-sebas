@@ -18,10 +18,6 @@ public class CSceneUtilities : MonoBehaviour
     private void Awake()
     {
         if (instance == null) instance = this;
-    }
-
-    private void Start()
-    {
         fadingImg = pnlFadingTransition.GetComponent<Image>();
     }
     #endregion
@@ -65,6 +61,11 @@ public class CSceneUtilities : MonoBehaviour
     public void LoadSceneWithFadingTransition(int index)
     {
         StartCoroutine(LoadSceneWithFadingTransitionCoroutine(index));
+    }
+
+    public void StartSceneFadeIn()
+    {
+        StartCoroutine(FadeIn());
     }
     #endregion
 }
