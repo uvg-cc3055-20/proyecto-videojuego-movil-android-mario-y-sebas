@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4014166349215694}
-  - component: {fileID: 114948730218314018}
+  - component: {fileID: 114207505874990944}
   m_Layer: 0
   m_Name: SceneFadingTransition
   m_TagString: Untagged
@@ -40,7 +40,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114948730218314018
+--- !u!114 &114207505874990944
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -48,10 +48,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1027737650582990}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdc04a1859a52b04285374fd697860e6, type: 3}
+  m_Script: {fileID: 11500000, guid: c98cc69279df08c4eaef67c168a0acd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadingImgPrefab: {fileID: 1709542455709120, guid: f2b2a4543caf48b45b2106cc2fe3813b,
-    type: 2}
-  mainCanvas: {fileID: 0}
+  pnlFadingTransition: {fileID: 0}
   fadingSpeed: 1

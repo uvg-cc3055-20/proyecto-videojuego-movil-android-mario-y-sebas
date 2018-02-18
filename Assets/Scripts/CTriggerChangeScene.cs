@@ -8,6 +8,6 @@ public class CTriggerChangeScene : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        CSceneUtilities.LoadScene(newSceneIndex);
+        CSceneUtilities.instance.LoadSceneWithFadingTransition(newSceneIndex);
     }
 }
