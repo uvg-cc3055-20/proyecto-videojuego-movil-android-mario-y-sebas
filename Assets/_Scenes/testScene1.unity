@@ -499,6 +499,53 @@ GameObject:
   m_PrefabParentObject: {fileID: 1456404373440428, guid: e780806ac17cfdd4480000333a78b1b2,
     type: 2}
   m_PrefabInternal: {fileID: 489794840}
+--- !u!1001 &558135509
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4341042638127558, guid: 123f42b2230d0564caef455b581aadf1, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341042638127558, guid: 123f42b2230d0564caef455b581aadf1, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341042638127558, guid: 123f42b2230d0564caef455b581aadf1, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341042638127558, guid: 123f42b2230d0564caef455b581aadf1, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341042638127558, guid: 123f42b2230d0564caef455b581aadf1, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341042638127558, guid: 123f42b2230d0564caef455b581aadf1, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341042638127558, guid: 123f42b2230d0564caef455b581aadf1, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341042638127558, guid: 123f42b2230d0564caef455b581aadf1, type: 2}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 50652054217045956, guid: 123f42b2230d0564caef455b581aadf1,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 123f42b2230d0564caef455b581aadf1, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &601207891
 Prefab:
   m_ObjectHideFlags: 0
