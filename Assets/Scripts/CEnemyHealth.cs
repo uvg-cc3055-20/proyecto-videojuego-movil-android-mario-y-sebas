@@ -13,11 +13,6 @@ public class CEnemyHealth : MonoBehaviour
         health = maxHealth;
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        Debug.Log("Enemy hit!");
-    }
-
     public void MakeDamage(float amount)
     {
         if (amount > 0)
@@ -26,7 +21,7 @@ public class CEnemyHealth : MonoBehaviour
             if (health < 0)
             {
                 health = 0;
-                // trigger death
+                //TODO: trigger death
             }
         }
     }
