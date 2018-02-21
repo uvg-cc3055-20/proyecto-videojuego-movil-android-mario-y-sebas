@@ -25,6 +25,7 @@ public class CGameController : MonoBehaviour
     public void RespawnPlayer()
     {
         player.transform.position = spawnPosition.position;
+        Debug.Log("Player died...respawning.");
     }
     #endregion
 }
