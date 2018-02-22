@@ -1,17 +1,17 @@
 fileFormatVersion: 2
-guid: e0e648dfe2efbf747a9deb0f1c8ca83b
-timeCreated: 1519276726
+guid: cc8a728f552a3ba4fbb5c30de24ea8a8
+timeCreated: 1519276541
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: blob idle_0
-    21300002: blob idle_1
-    21300004: blob idle_2
-    21300006: blob idle_3
-    21300008: blob idle_4
-    21300010: blob idle_5
-    21300012: blob idle_6
-    21300014: blob idle_7
+    21300000: bloblMinionWalk_0
+    21300002: bloblMinionWalk_1
+    21300004: bloblMinionWalk_2
+    21300006: bloblMinionWalk_3
+    21300008: bloblMinionWalk_4
+    21300010: bloblMinionWalk_5
+    21300012: bloblMinionWalk_6
+    21300014: bloblMinionWalk_7
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: blob idle_0
+      name: bloblMinionWalk_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 24
+        y: 0
         width: 80
-        height: 21
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,13 +112,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: blob idle_1
+      name: bloblMinionWalk_1
       rect:
         serializedVersion: 2
         x: 80
-        y: 24
+        y: 0
         width: 80
-        height: 21
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,13 +126,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: blob idle_2
+      name: bloblMinionWalk_2
       rect:
         serializedVersion: 2
         x: 160
-        y: 22
+        y: 0
         width: 80
-        height: 22
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,13 +140,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: blob idle_3
+      name: bloblMinionWalk_3
       rect:
         serializedVersion: 2
         x: 240
-        y: 22
+        y: 0
         width: 80
-        height: 22
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,13 +154,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: blob idle_4
+      name: bloblMinionWalk_4
       rect:
         serializedVersion: 2
         x: 320
-        y: 18
+        y: 0
         width: 80
-        height: 24
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,13 +168,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: blob idle_5
+      name: bloblMinionWalk_5
       rect:
         serializedVersion: 2
         x: 400
-        y: 18
+        y: 0
         width: 80
-        height: 24
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,13 +182,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: blob idle_6
+      name: bloblMinionWalk_6
       rect:
         serializedVersion: 2
         x: 480
-        y: 22
+        y: 0
         width: 80
-        height: 22
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,13 +196,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: blob idle_7
+      name: bloblMinionWalk_7
       rect:
         serializedVersion: 2
         x: 560
-        y: 22
+        y: 0
         width: 80
-        height: 22
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

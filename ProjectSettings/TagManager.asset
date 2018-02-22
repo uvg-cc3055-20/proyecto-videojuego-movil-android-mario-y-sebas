@@ -18,8 +18,8 @@ TagManager:
   - Ground
   - PlayerFeet
   - Player
-  - 
-  - 
+  - Enemy
+  - EnemyBullets
   - 
   - 
   - 
@@ -45,4 +45,7 @@ TagManager:
     locked: 0
   - name: WORLD
     uniqueID: 544164905
+    locked: 0
+  - name: Enemy
+    uniqueID: 3839714469
     locked: 0

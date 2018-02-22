@@ -1,17 +1,11 @@
 fileFormatVersion: 2
-guid: e0e648dfe2efbf747a9deb0f1c8ca83b
-timeCreated: 1519276726
+guid: 6e5e37bab89ad6b49b0d193650f99f4f
+timeCreated: 1519272890
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: blob idle_0
-    21300002: blob idle_1
-    21300004: blob idle_2
-    21300006: blob idle_3
-    21300008: blob idle_4
-    21300010: blob idle_5
-    21300012: blob idle_6
-    21300014: blob idle_7
+    21300000: countryBackgroundWithTree
+    21300002: countryBackgroundFloor
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -98,13 +92,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: blob idle_0
+      name: countryBackgroundWithTree
       rect:
         serializedVersion: 2
-        x: 0
-        y: 24
-        width: 80
-        height: 21
+        x: 32
+        y: 0
+        width: 126
+        height: 142
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,99 +106,15 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: blob idle_1
+      name: countryBackgroundFloor
       rect:
         serializedVersion: 2
-        x: 80
-        y: 24
+        x: 32
+        y: 0
         width: 80
-        height: 21
+        height: 43
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: blob idle_2
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 22
-        width: 80
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: blob idle_3
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 22
-        width: 80
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: blob idle_4
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 18
-        width: 80
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: blob idle_5
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 18
-        width: 80
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: blob idle_6
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 22
-        width: 80
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: blob idle_7
-      rect:
-        serializedVersion: 2
-        x: 560
-        y: 22
-        width: 80
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

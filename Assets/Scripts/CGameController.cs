@@ -8,6 +8,8 @@ public class CGameController : MonoBehaviour
     public static CGameController instance;
     public GameObject player;
     public Transform spawnPosition;
+
+    private int deaths = 0;
     
     #region Unity Callbacks
     private void Awake()
@@ -25,7 +27,8 @@ public class CGameController : MonoBehaviour
     public void RespawnPlayer()
     {
         player.transform.position = spawnPosition.position;
-        Debug.Log("Player died...respawning.");
+        deaths++;
+        Debug.Log("Player died...respawning."); // TODO: remove for release
     }
     #endregion
 }
