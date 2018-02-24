@@ -16,4 +16,13 @@ public class CMinionAttackBall : MonoBehaviour
 	{
 		transform.Translate(Vector2.right * speed * Time.deltaTime);
 	}
+
+	private void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.gameObject.CompareTag("Player"))
+		{
+			CGameController.instance.RespawnPlayer();
+		}
+		Destroy(gameObject);
+	}
 }

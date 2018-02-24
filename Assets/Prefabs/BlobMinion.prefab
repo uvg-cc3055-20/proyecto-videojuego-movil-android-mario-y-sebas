@@ -24,8 +24,7 @@ GameObject:
   - component: {fileID: 70735917466964842}
   - component: {fileID: 95287463827735468}
   - component: {fileID: 82051374175437558}
-  - component: {fileID: 114633709625704704}
-  - component: {fileID: 114169084630763426}
+  - component: {fileID: 114425536006661878}
   m_Layer: 11
   m_Name: BlobMinion
   m_TagString: Enemy
@@ -178,7 +177,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114169084630763426
+--- !u!114 &114425536006661878
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -186,32 +185,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1060601637746488}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2da92b99c2d3ffa4ebe97ba9b1d9007e, type: 3}
+  m_Script: {fileID: 11500000, guid: b0dbcfd83c603634583bf7faa64e36dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   attackPrefab: {fileID: 1139934059548800, guid: b6af0ad1b5c77084a81e65f739264c90,
     type: 2}
-  attackDistance: 2
-  targetLayerMask:
-    serializedVersion: 2
-    m_Bits: 1024
-  attackCooldownTime: 0.5
-  animDuration: 2
---- !u!114 &114633709625704704
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1060601637746488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de4ef817ce4b72d44b61819891666f5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.75
-  moveAudioLoopTime: 0.25
-  minRandomIdleTime: 2
-  maxRandomIdleTime: 5
+  animDuration: 1
 --- !u!212 &212812819622335084
 SpriteRenderer:
   m_ObjectHideFlags: 1
