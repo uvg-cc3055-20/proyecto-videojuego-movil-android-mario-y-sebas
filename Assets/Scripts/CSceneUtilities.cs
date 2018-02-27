@@ -18,19 +18,22 @@ public class CSceneUtilities : MonoBehaviour
     private void Awake()
     {
         if (instance == null) instance = this;
-        fadingImg = pnlFadingTransition.GetComponent<Image>();
+        if(pnlFadingTransition != null) fadingImg = pnlFadingTransition.GetComponent<Image>();
     }
     #endregion
     
     #region Private Methods
     private IEnumerator FadeIn()
     {
-        Color newColor = fadingImg.color;
-        while (newColor.a > 0f)
+        if (fadingImg != null)
         {
-            newColor.a -= (Time.deltaTime * fadingSpeed);
-            fadingImg.color = newColor;
-            yield return null;
+            Color newColor = fadingImg.color;
+            while (newColor.a > 0f)
+            {
+                newColor.a -= (Time.deltaTime * fadingSpeed);
+                fadingImg.color = newColor;
+                yield return null;
+            }
         }
     }
 
