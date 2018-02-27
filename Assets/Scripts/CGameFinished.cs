@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CEnemyAttack : MonoBehaviour 
+public class CGameFinished : MonoBehaviour 
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Player entered enemy attack detection box.");
-            CGameController.instance.RespawnPlayerSlow();
+            CGameController.instance.GameFinished();
         }
     }
 }

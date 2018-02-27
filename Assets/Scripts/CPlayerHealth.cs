@@ -7,6 +7,7 @@ using UnityEngine;
 public class CPlayerHealth : MonoBehaviour
 {
     public AudioClip hitClip;
+    public float deathAnimationDuration = 1f;
     
     private bool dead;
     private Animator animator;
@@ -20,13 +21,21 @@ public class CPlayerHealth : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy") && !dead)
         {
-            dead = true;
-            animator.SetBool("Dead", dead);
+            StartCoroutine(DeathCoroutine());
             audioSource.clip = hitClip;
             audioSource.Play();
-            Debug.Log("PLayerHealth-> player hit by: " + other.gameObject.name);
         }
+    }
+
+    private IEnumerator DeathCoroutine()
+    {
+        dead = true;
+        animator.SetBool("Dead", dead);
+        yield return new WaitForSeconds(deathAnimationDuration);
+        dead = false;
+        animator.SetBool("Dead", dead);
+        CGameController.instance.RespawnPlayerFast();
     }
 }

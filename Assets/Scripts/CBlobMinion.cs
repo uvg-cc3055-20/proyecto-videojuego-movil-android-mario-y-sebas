@@ -31,7 +31,8 @@ public class CBlobMinion : MonoBehaviour
             animator.SetBool("Walk", false);
             audioSource.mute = true;
             animator.SetBool("Attack", true);
-            Instantiate(attackPrefab, transform.position, Quaternion.identity);
+            Instantiate(attackPrefab, transform.position, Quaternion.identity).GetComponent<CMinionAttackBall>()
+                .direction = movement.direction;
             yield return new WaitForSeconds(animDuration);
             animator.SetBool("Attack", false);
             yield return new WaitForSeconds(randomWait);

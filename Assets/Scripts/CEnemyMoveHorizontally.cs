@@ -12,24 +12,26 @@ public class CEnemyMoveHorizontally : MonoBehaviour
     public float minRandomIdleTime = 0f;
     public float maxRandomIdleTime = 5f;
     public bool walking;
+    public sbyte direction;
     
-    private sbyte direction;
     private Animator animator;
     private AudioSource audioSource;
     private float audioLoopTime;
     private float randomIdleTime;
     private float ellapsedIdleTime;
+    private Vector3 originalScale;
 
     #region Unity Callbacks
     private void Start()
     {
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+        originalScale = transform.localScale;
         direction = 1;
         audioLoopTime = audioSource.clip.length / moveAudioLoopTime;
         walking = true;
         animator.SetBool("Walk", walking);
-        randomIdleTime = Random.Range(0f, maxRandomIdleTime);
+        randomIdleTime = Random.Range(minRandomIdleTime, maxRandomIdleTime);
         StartCoroutine(PlayLoopingMoveAudio());
     }
 
@@ -45,11 +47,13 @@ public class CEnemyMoveHorizontally : MonoBehaviour
             audioSource.mute = !walking;
         }
         if(walking) transform.Translate(Vector2.right * direction * speed * Time.deltaTime);
+        Debug.Log(direction);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        ReverseDirection();
+        if(other.gameObject.CompareTag("World"))
+            ReverseDirection();
     }
 
     #endregion
@@ -58,7 +62,7 @@ public class CEnemyMoveHorizontally : MonoBehaviour
     private void ReverseDirection()
     {
         direction *= -1;
-        transform.localScale = new Vector3(direction, 1f, 1f);
+        transform.localScale = new Vector3(originalScale.x * direction, originalScale.y, originalScale.z);
     }
 
     private IEnumerator PlayLoopingMoveAudio()
