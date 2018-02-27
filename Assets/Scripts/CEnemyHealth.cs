@@ -4,25 +4,12 @@ using UnityEngine;
 
 public class CEnemyHealth : MonoBehaviour
 {
-    public float maxHealth;
-
-    private float health;
-
-    private void Start()
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        health = maxHealth;
-    }
-
-    public void MakeDamage(float amount)
-    {
-        if (amount > 0)
+        if (other.gameObject.CompareTag("PlayerAttack"))
         {
-            health -= amount;
-            if (health < 0)
-            {
-                health = 0;
-                //TODO: trigger death
-            }
+            Debug.Log("ASDJFKLASJDFLKAJSLDKFJALKSDJFLKASD");
+            Destroy(gameObject);
         }
     }
 }

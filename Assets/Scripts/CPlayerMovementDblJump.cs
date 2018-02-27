@@ -15,7 +15,7 @@ public class CPlayerMovementDblJump : MonoBehaviour
     public float jumpForce;
     [Tooltip("Audio to play when player jumps.")]
     public AudioClip jumpAudio;
-
+    public float attackAnimationDuration;
     public GameObject attackBox;
     #endregion
 
@@ -163,9 +163,11 @@ public class CPlayerMovementDblJump : MonoBehaviour
 
     private IEnumerator AttackCoroutine()
     {
+        attackBox.SetActive(true);
         animator.SetBool("Attack", true);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(attackAnimationDuration);
         animator.SetBool("Attack", false);
+        attackBox.SetActive(false);
     }
     #endregion
 }

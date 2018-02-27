@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 82051374175437558}
   - component: {fileID: 114425536006661878}
   - component: {fileID: 114280583815313046}
+  - component: {fileID: 114587157418414884}
   m_Layer: 11
   m_Name: BlobMinion
   m_TagString: Enemy
@@ -69,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1060601637746488}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.717, y: -0.58102846, z: 0}
+  m_LocalPosition: {x: -0.68, y: -0.58102846, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 4303567166633984}
@@ -264,6 +265,17 @@ MonoBehaviour:
   attackPrefab: {fileID: 1139934059548800, guid: b6af0ad1b5c77084a81e65f739264c90,
     type: 2}
   animDuration: 1
+--- !u!114 &114587157418414884
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1060601637746488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ecdf07d07ba10c459dc6beb6625fb66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212812819622335084
 SpriteRenderer:
   m_ObjectHideFlags: 1
