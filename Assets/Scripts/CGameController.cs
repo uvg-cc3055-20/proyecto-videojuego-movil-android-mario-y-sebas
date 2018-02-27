@@ -1,25 +1,30 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class CGameController : MonoBehaviour
 {
     public static CGameController instance;
-    public GameObject player;
     public Transform spawnPosition;
     public Text txtDeaths;
+    public int deaths = 0;
 
-    private int deaths = 0;
+    private GameObject player;
     
     #region Unity Callbacks
     private void Awake()
     {
-        if (instance == null) instance = this;
-        DontDestroyOnLoad(gameObject);
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     private void Start()
     {
         CSceneUtilities.instance.StartSceneFadeIn();
+        player = FindObjectOfType<CPlayerMovementDblJump>().gameObject;
     }
     #endregion
     
@@ -34,6 +39,7 @@ public class CGameController : MonoBehaviour
     public void GameFinished()
     {
         Debug.Log("Player finished game with " + deaths + " deaths."); //TODO: remove for release
+        CSceneUtilities.instance.LoadScene(3);
     }
     #endregion
 }

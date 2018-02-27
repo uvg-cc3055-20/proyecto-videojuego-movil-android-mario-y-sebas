@@ -13,7 +13,7 @@ public class CEnemyInstantiateFromSky : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && (spawnAmount--) > 0)
         {
-            Instantiate(enemies[Random.Range(0, enemies.Length)], spawnPoint.position, Quaternion.identity);   
+            Instantiate(enemies[Random.Range(0, enemies.Length)], spawnPoint.position, Quaternion.identity);
         }
     }
 }
