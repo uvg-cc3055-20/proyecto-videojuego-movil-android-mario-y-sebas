@@ -15,6 +15,8 @@ public class CPlayerMovementDblJump : MonoBehaviour
     public float jumpForce;
     [Tooltip("Audio to play when player jumps.")]
     public AudioClip jumpAudio;
+
+    public GameObject attackBox;
     #endregion
 
     #region Private Attributes
@@ -51,7 +53,8 @@ public class CPlayerMovementDblJump : MonoBehaviour
         if (!health.dead)
         {
             Move();
-            Jump();   
+            Jump();
+            Attack();
         }
     }
 
@@ -148,6 +151,21 @@ public class CPlayerMovementDblJump : MonoBehaviour
             audioSource.Play();
         }
 #endif
+    }
+    
+    private void Attack()
+    {
+        if (CInputController.instance.IsBBtnFirstPress)
+        {
+            StartCoroutine(AttackCoroutine());
+        }
+    }
+
+    private IEnumerator AttackCoroutine()
+    {
+        animator.SetBool("Attack", true);
+        yield return new WaitForSeconds(1f);
+        animator.SetBool("Attack", false);
     }
     #endregion
 }
