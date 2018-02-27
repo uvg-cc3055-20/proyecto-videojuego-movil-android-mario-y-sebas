@@ -47,13 +47,11 @@ public class CEnemyMoveHorizontally : MonoBehaviour
             audioSource.mute = !walking;
         }
         if(walking) transform.Translate(Vector2.right * direction * speed * Time.deltaTime);
-        Debug.Log(direction);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("World"))
-            ReverseDirection();
+        ReverseDirection();
     }
 
     #endregion

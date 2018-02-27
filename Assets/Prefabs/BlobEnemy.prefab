@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4371155556789052}
   - component: {fileID: 61540886169137624}
-  - component: {fileID: 114215776612888370}
   m_Layer: 0
   m_Name: DetectionBox
   m_TagString: Untagged
@@ -56,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1602328793380146}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.79362005, y: -0.7607973, z: 0}
+  m_LocalPosition: {x: 10.67, y: -0.7811781, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4371155556789052}
@@ -133,7 +132,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.18864378, y: -0.02540487}
+  m_Offset: {x: -0.07333231, y: 0.03945756}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -144,7 +143,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3832342, y: 0.15640318}
+  m_Size: {x: 0.055645943, y: 0.15771353}
   m_EdgeRadius: 0
 --- !u!82 &82898431029316026
 AudioSource:
@@ -243,17 +242,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114215776612888370
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1595787827435762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23de41ea4b11d4046a3bf1b61ed3a2df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114655542632865874
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -269,6 +257,8 @@ MonoBehaviour:
   moveAudioLoopTime: 0.3
   minRandomIdleTime: 2
   maxRandomIdleTime: 5
+  walking: 0
+  direction: 0
 --- !u!212 &212626993117552154
 SpriteRenderer:
   m_ObjectHideFlags: 1

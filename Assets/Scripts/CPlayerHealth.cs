@@ -8,8 +8,8 @@ public class CPlayerHealth : MonoBehaviour
 {
     public AudioClip hitClip;
     public float deathAnimationDuration = 1f;
+    public bool dead;
     
-    private bool dead;
     private Animator animator;
     private AudioSource audioSource;
 

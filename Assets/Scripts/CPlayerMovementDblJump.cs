@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(AudioSource))]
+[RequireComponent(typeof(CPlayerHealth))]
 public class CPlayerMovementDblJump : MonoBehaviour
 {
     #region Public Attributes
@@ -17,6 +18,7 @@ public class CPlayerMovementDblJump : MonoBehaviour
     #endregion
 
     #region Private Attributes
+    private CPlayerHealth health;
     private Animator animator;
     private Rigidbody2D rigidBody;
     private AudioSource audioSource;
@@ -33,6 +35,7 @@ public class CPlayerMovementDblJump : MonoBehaviour
         animator = GetComponent<Animator>();
         rigidBody = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
+        health = GetComponent<CPlayerHealth>();
     }
 
     private void Start()
@@ -45,8 +48,11 @@ public class CPlayerMovementDblJump : MonoBehaviour
 
     private void Update()
     {
-        Move();
-        Jump();
+        if (!health.dead)
+        {
+            Move();
+            Jump();   
+        }
     }
 
     #endregion

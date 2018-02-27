@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.Serialization.Formatters;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class CGameController : MonoBehaviour
 {
     public static CGameController instance;
     public GameObject player;
     public Transform spawnPosition;
+    public Text txtDeaths;
 
     private int deaths = 0;
     
@@ -26,31 +24,16 @@ public class CGameController : MonoBehaviour
     #endregion
     
     #region Public Methods
-    public void RespawnPlayerSlow()
-    {
-        Debug.Log("Player died...respawning."); // TODO: remove for release
-        StartCoroutine(DeathCoroutine());
-    }
-
     public void RespawnPlayerFast()
     {
         player.transform.position = spawnPosition.position;
         deaths++;
+        txtDeaths.text = string.Concat("Muertes: ", deaths);
     }
 
     public void GameFinished()
     {
-        Debug.Log("Player finished game with " + deaths + " deaths.");
-    }
-    #endregion
-    
-    #region Private Methods
-
-    private IEnumerator DeathCoroutine()
-    {
-        yield return new WaitForSeconds(2f);
-        player.transform.position = spawnPosition.position;
-        deaths++;
+        Debug.Log("Player finished game with " + deaths + " deaths."); //TODO: remove for release
     }
     #endregion
 }

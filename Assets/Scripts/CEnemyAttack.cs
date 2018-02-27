@@ -9,7 +9,7 @@ public class CEnemyAttack : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("Player entered enemy attack detection box.");
-            CGameController.instance.RespawnPlayerSlow();
+            CGameController.instance.RespawnPlayerFast();
         }
     }
 }

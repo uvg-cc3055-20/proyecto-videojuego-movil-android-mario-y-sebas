@@ -6,6 +6,6 @@ public class CUnderworld : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-        CGameController.instance.RespawnPlayerFast();
+        if(other.gameObject.CompareTag("Player")) CGameController.instance.RespawnPlayerFast();
     }
 }
