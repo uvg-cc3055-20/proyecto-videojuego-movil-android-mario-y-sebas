@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4572260294216260}
   - component: {fileID: 61538817438987582}
   - component: {fileID: 114256263957294938}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: feet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,13 +37,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4237206059287702}
   - component: {fileID: 61414878978048896}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: attackBox
   m_TagString: PlayerAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1909741530742008
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 114137101017581090}
   - component: {fileID: 114439190872672668}
   - component: {fileID: 82898475227861014}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: monkey
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1909741530742008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.58, y: -0.62982726, z: 0}
+  m_LocalPosition: {x: -1.58, y: -0.59900004, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_Children:
   - {fileID: 4572260294216260}

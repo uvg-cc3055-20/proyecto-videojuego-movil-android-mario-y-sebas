@@ -9,5 +9,6 @@ public class CTriggerChangeScene : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         CSceneUtilities.instance.LoadSceneWithFadingTransition(newSceneIndex);
+        CGameController.instance.SaveDeaths();
     }
 }
