@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization.Formatters;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -15,6 +16,7 @@ public class CPlayerMovementDblJump : MonoBehaviour
     public float jumpForce;
     [Tooltip("Audio to play when player jumps.")]
     public AudioClip jumpAudio;
+    public AudioClip attackAudio;
     public float attackAnimationDuration;
     public GameObject attackBox;
     #endregion
@@ -99,6 +101,8 @@ public class CPlayerMovementDblJump : MonoBehaviour
         
 #if UNITY_EDITOR // TODO: remove for release
         float _dir = Input.GetAxis("Horizontal");
+        if (_dir < 0) transform.localScale = leftWalkingScale;
+        else if(_dir > 0) transform.localScale = rightWalkingScale;
         transform.Translate(Vector2.right * _dir * moveSpeed * Time.deltaTime);
         // set parameter for walking or idle animation
         animator.SetInteger("Walking", Mathf.CeilToInt(_dir));
@@ -155,17 +159,24 @@ public class CPlayerMovementDblJump : MonoBehaviour
     
     private void Attack()
     {
+        #if UNITY_ANDROID
         if (CInputController.instance.IsBBtnFirstPress)
         {
             StartCoroutine(AttackCoroutine());
         }
+        #endif
+        #if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.RightShift)) StartCoroutine(AttackCoroutine());
+#endif
     }
 
     private IEnumerator AttackCoroutine()
     {
         attackBox.SetActive(true);
+        audioSource.clip = attackAudio;
         animator.SetBool("Attack", true);
         yield return new WaitForSeconds(attackAnimationDuration);
+        audioSource.Play();
         animator.SetBool("Attack", false);
         attackBox.SetActive(false);
     }
