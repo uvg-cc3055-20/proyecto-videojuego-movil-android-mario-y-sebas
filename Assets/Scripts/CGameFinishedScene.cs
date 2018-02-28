@@ -9,7 +9,6 @@ public class CGameFinishedScene : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("DEATSH: " +CGameController.instance.deaths);
         txtInfo.text = string.Concat("¡Ganaste el juego con ", CGameController.instance.deaths,
             " muertes!");
     }
